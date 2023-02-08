@@ -14,8 +14,6 @@ screen.title("RADALOS")
 
 
 
-
-
 #Below are file paths to images to add flare and formatting or whatever
 portrait = Image.open('images/rathalos/portrait/r.jpg')
 monPort = ImageTk.PhotoImage(portrait)
