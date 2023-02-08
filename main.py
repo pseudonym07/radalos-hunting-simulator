@@ -1,13 +1,5 @@
 import random
-import tkinter as tk
-from tk import *
-from PIL import ImageTk, Image
-
-
-
-screen = tk.Tk()
-screen.geometry("%dx%d" % (screen.winfo_screenwidth(), screen.winfo_screenheight()))
-screen.title("RADALOS")
+import climage
 
 
 
@@ -15,27 +7,13 @@ screen.title("RADALOS")
 
 
 #Below are file paths to images to add flare and formatting or whatever
-portrait = Image.open('images/rathalos/portrait/r.jpg')
-monPort = ImageTk.PhotoImage(portrait)
-monPortLB = tk.Label()
-
-fire = Image.open('images/rathalos/attacks/firerad.png')
-monFire = ImageTk.PhotoImage(fire)
-
-claw = Image.open('images/rathalos/attacks/clawrad.png')
-monClaw = ImageTk.PhotoImage(claw)
-
-tail = Image.open('images/rathalos/attacks/tailrad.png')
-monTail = ImageTk.PhotoImage(tail)
-
-tscreen = Image.open('images/screens/titlescreen.png')
-title = ImageTk.PhotoImage(tscreen)
-
-game_over = Image.open('images/screens/questf.png')
-gover = ImageTk.PhotoImage(game_over)
-
-quest_complete = Image.open('images/screens/questq.png')
-qcomp = ImageTk.PhotoImage(quest_complete)
+portrait = climage.convert('images/rathalos/portrait/r.jpg')
+fire = climage.convert('images/rathalos/attacks/firerad.png')
+claw = climage.convert('images/rathalos/attacks/clawrad.png')
+tail = climage.convert('images/rathalos/attacks/tailrad.png')
+tscreen = climage.convert('images/screens/titlescreen.png')
+game_over = climage.convert('images/screens/questf.png')
+quest_complete = climage.convert('images/screens/questq.png')
 
 #Honestly have no Idea what this is here for but I used it to make something work so its cool
 atk = ["Claw Slash", "Fireball", "Tail Smash"]
